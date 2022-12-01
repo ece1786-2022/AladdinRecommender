@@ -1,0 +1,6 @@
+sent_model = SentenceTransformer(modules=[word_embedding_model, pooling_model]).to(device)
+checkpoint = torch.load('bruce_sent_model.pt', device)
+sent_model.load_state_dict(checkpoint)
+sent_model.to(device)
+
+Model '.pt' file is uploaded to shared google drive folder due to its large size (over 100MB)
