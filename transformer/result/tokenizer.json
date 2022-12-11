@@ -17,57 +17,57 @@
   "added_tokens": [
     {
       "id": 0,
+      "special": true,
       "content": "<s>",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
-      "normalized": false,
-      "special": true
+      "normalized": false
     },
     {
       "id": 1,
+      "special": true,
       "content": "<pad>",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
-      "normalized": false,
-      "special": true
+      "normalized": false
     },
     {
       "id": 2,
+      "special": true,
       "content": "</s>",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
-      "normalized": false,
-      "special": true
+      "normalized": false
     },
     {
       "id": 3,
+      "special": true,
       "content": "<unk>",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
-      "normalized": true,
-      "special": true
+      "normalized": true
     },
     {
       "id": 104,
+      "special": true,
       "content": "[UNK]",
       "single_word": false,
       "lstrip": false,
       "rstrip": false,
-      "normalized": false,
-      "special": true
+      "normalized": false
     },
     {
       "id": 30526,
+      "special": true,
       "content": "<mask>",
       "single_word": false,
       "lstrip": true,
       "rstrip": false,
-      "normalized": false,
-      "special": true
+      "normalized": false
     }
   ],
   "normalizer": {

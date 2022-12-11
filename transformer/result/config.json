@@ -19,6 +19,6 @@
   "pad_token_id": 1,
   "relative_attention_num_buckets": 32,
   "torch_dtype": "float32",
-  "transformers_version": "4.25.1",
+  "transformers_version": "4.24.0",
   "vocab_size": 30527
 }
