@@ -8,7 +8,7 @@ As the movie industry has bloomed and developed during the past century, an incr
 # Data Source and Crawling Scripts
 Data Source: [TMDB 5000 Movie Dataset](https://www.kaggle.com/datasets/tmdb/tmdb-movie-metadata)
 
-*Crawling Scirpts: crawl/\* *
+Crawling Scirpts: crawl/\*
 
 # Architecture and Software
 
@@ -26,4 +26,23 @@ During the recommendation phase, the users can input anything as sentences which
 
 Besides, a UI interface is constructed using Gradio embedding our model to the webpage and allowing users to input queries and observe results.
 
-*Code and experiments: in transformer folder*
+*Code and experiments: transformer/\**
+
+# Baseline Model
+
+After data cleaning and preprocessing, the baseline model supports the same functions as transformers, which accepts users arbitrary sentence inputs and returns the top most relevant movies based on input queries. Our baseline model mainly uses tf-idf (term-frequency and inverse-document-frequency) scores to vectorize all movie information such as plot, genres, etc and form the tf-idf matrix. The recommender will iterate through the matrix of vectors and find the top most similar movies vectors  given user input queries using minimization of cos-similarity. Since tf-idf vectorizers have less concern about the sentences ordering but concentrate more on tokens, all relative information could be added at tails. Besides, n-grams are used for lengths of 1 to 3 in order to expand our corpus size and extract more combinations of tokens. 
+
+*Code and experiments: baselines/\**
+
+# Discussion and Learnings
+
+The model performance is surprisingly well based on the results from both quantitative and qualitative results, especially the high values of MAP. One thing we noticed during the development of our model is that because of how informal queries have vague meanings compared to solid-feature queries, people could interpret them differently. This means no matter how accurately our model performs, personalized preference setting should be considered for users. Even if this is a common situation for a pure content-based recommendation system without considering user preferences, it could be certainly improved by combining the session-based or collaborative-based methods if we start again by shifting some concentration from NLP applications to results improvements and availability out of this course. Besides, a more comprehensive dataset would be much useful that more movies can be trained on instead of filtered out without enough information The best usage scenario for our model could be embedded into the search engine of a movie website, we are allowed to not only apply some hard constraint to the searching result(e.g. Language, R-rating), but also adjust the model based on the user's choice of recommendations. 
+
+# Reference
+1. J. Ng, “Content-based recommender using Natural Language Processing (NLP),” KDnuggets. [Online]. Available: https://www.kdnuggets.com/2019/11/content-based-recommender-using-natural-language-processing-nlp.html.
+2. G. Moreira, “Transformers4Rec: A flexible library for sequential and session-based recommendation,” Medium, 08-Nov-2021. [Online]. Available: https://medium.com/nvidia-merlin/transformers4rec-4523cc7d8fa8
+3. T. M. D. (TMDb), “TMDB 5000 movie dataset,” Kaggle, 28-Sep-2017. [Online]. Available: https://www.kaggle.com/datasets/tmdb/tmdb-movie-metadata
+4. N. Reimers and I. Gurevych, “Sentence-bert: Sentence embeddings using Siamese Bert-Networks,” arXiv.org, 27-Aug-2019. [Online]. Available: https://arxiv.org/abs/1908.10084
+5. O. Espejel, “Sentence-transformers/all-mpnet-base-V2 · hugging face,” sentence-transformers/all-mpnet-base-v2 · Hugging Face. [Online]. 6. Available: https://huggingface.co/sentence-transformers/all-mpnet-base-v2.
+6. M. Romero, “MRM8488/T5-base-finetuned-imdb-sentiment · hugging face,” mrm8488/t5-base-finetuned-imdb-sentiment · Hugging Face. [Online]. Available: https://huggingface.co/mrm8488/t5-base-finetuned-imdb-sentiment
+
