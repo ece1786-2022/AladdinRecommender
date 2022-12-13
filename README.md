@@ -23,4 +23,4 @@ During the recommendation phase, the users can input anything as sentences which
 
 Besides, a UI interface is constructed using Gradio embedding our model to the webpage and allowing users to input queries and observe results.
 
-**Code and experiments: transformer/* **
+*Code and experiments: in transformer folder*
