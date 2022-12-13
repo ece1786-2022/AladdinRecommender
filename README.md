@@ -20,11 +20,15 @@ The final loss function is OnlineContrastiveLoss which will minimize the distanc
 
 In this way, our model output will be closer to positive reviews and far away from negative results. As the training phase shown below, the OnlineContrastiveLoss is used to update our model through backpropagation and the epochs and batch size are 10 and 4 respectively with default learning rate 2e-05 due to limitation of computation power. 
 
+![alt text](https://github.com/ece1786-2022/AladdinRecommender/blob/main/images/training_structure.png)
 
 During the recommendation phase, the users can input anything as sentences which are converted into sentence embedding(y). Then the embedding(y) is compared to all other movies' complete sentences using minimization of cosine-similarity which yields the top most similar movies as our outputs.
 
+![alt text](https://github.com/ece1786-2022/AladdinRecommender/blob/main/images/validation_structure.png)
 
 Besides, a UI interface is constructed using Gradio embedding our model to the webpage and allowing users to input queries and observe results.
+
+![alt text](https://github.com/ece1786-2022/AladdinRecommender/blob/main/images/ui.png)
 
 *Code and experiments: transformer/\**
 
