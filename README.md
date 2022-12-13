@@ -7,7 +7,8 @@ As the movie industry has bloomed and developed during the past century, an incr
 
 # Data Source and Crawling Scripts
 Data Source: [TMDB 5000 Movie Dataset](https://www.kaggle.com/datasets/tmdb/tmdb-movie-metadata)
-Crawling Scirpts: crawl/*
+
+*Crawling Scirpts: crawl/\* *
 
 # Architecture and Software
 
